@@ -91,23 +91,47 @@ namespace FirstCSharp
     // Console.WriteLine(i);
     // }
     // // Create an array of the names "Tim", "Martin", "Nikki", & "Sara"
-    // string[] arr3 = {"Tim","Martin","Nikki","Sara"};
     // foreach (var i in arr3){
     //     Console.WriteLine(i);
     // }
     // Create an array of length 10 that alternates between true and false values, starting with true
-    bool[] arr4 = new bool[10];
-    for (var i = 0; i < arr4.Length;i++){
-        if(i % 2 == 0){
-            arr4[i] = true;
-        }
-        else{
-            arr4[i] = false;
-        }
-    }
-    foreach (var i in arr4){
-        Console.WriteLine(i);
-    }
+    // bool[] arr4 = new bool[10];
+    // for (var i = 0; i < arr4.Length;i++){
+    //     if(i % 2 == 0){
+    //         arr4[i] = true;
+    //     }
+    //     else{
+    //         arr4[i] = false;
+    //     }
+    // }
+    // foreach (var i in arr4){
+    //     Console.WriteLine(i);
+    // }
+    // List<string> iceCream = new List<string>();
+    // iceCream.Add("chocholate");
+    // iceCream.Add("vanilla");
+    // iceCream.Add("banana");
+    // iceCream.Add("caramel");
+    // iceCream.Add("blackMamba");
+    // iceCream.RemoveAt(2);
+    // // Console.WriteLine($"the length of this list is : {iceCream.Count}");
+    // Random rand = new Random();
+    // int num;
+    // string[] arr3 = {"Tim","Martin","Nikki","Sara"};
+    // Dictionary <string,string> User = new Dictionary<string, string>();
+    // num = rand.Next(0 , iceCream.Count);
+    // User.Add(arr3[0], iceCream[num]);
+    // num = rand.Next(0 , iceCream.Count);
+    // User.Add(arr3[1], iceCream[num]);
+    // num = rand.Next(0 , iceCream.Count);
+    // User.Add(arr3[2], iceCream[num]);
+    // num = rand.Next(0 , iceCream.Count);
+    
+    // User.Add(arr3[3], iceCream[num]);
+    // foreach ( var i in User){
+    //     Console.WriteLine(i);
+    // }
+
 
 
 
