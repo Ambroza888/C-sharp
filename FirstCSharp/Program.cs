@@ -54,17 +54,40 @@ namespace FirstCSharp
       //     Console.WriteLine($"i won a {i}");
       // }
       //Initializing an empty list of Motorcycle Manufacturers
-      List<string> bikes = new List<string>();
-      //Use the Add function in a similar fashion to push
-      bikes.Add("Kawasaki");
-      bikes.Add("Triumph");
-      bikes.Add("BMW");
-      bikes.Add("Moto Guzzi");
-      bikes.Add("Harley Davidson");
-      bikes.Add("Suzuki");
-      //Accessing a generic list value is the same as you would an array
-      Console.WriteLine(bikes[2]); //Prints "BMW"
-      Console.WriteLine($"We currently know of {bikes.Count} motorcycle manufacturers.");
+    //   List<string> bikes = new List<string>();
+    //   bikes.Add("Kawasaki");
+    //   bikes.Add("Triumph");
+    //   bikes.Add("BMW");
+    //   bikes.Add("Moto Guzzi");
+    //   bikes.Add("Harley Davidson");
+    //   bikes.Add("Suzuki");
+    // bikes.Insert(2,"Yamaha");
+    // bikes.Remove("Yamaha");
+    // bikes.RemoveAt(0);
+    //     // bikes.Remove("Kawasaki");
+    //     foreach(string i in bikes){
+    //         Console.WriteLine("- " + i);
+    //     }    
+Dictionary<string,string> profile = new Dictionary<string,string>();
+//Almost all the methods that exists with Lists are the same with Dictionaries
+profile.Add("Name", "Speros");
+profile.Add("Language", "PHP");
+profile.Add("Location", "Greece");
+// Console.WriteLine("Instructor Profile");
+// Console.WriteLine("Name - " + profile["Name"]);
+// Console.WriteLine("From - " + profile["Location"]);
+// Console.WriteLine("Favorite Language - " + profile["Language"]);
+foreach(KeyValuePair<string,string> veso in profile){
+    Console.WriteLine(veso.Key);
+}
+
+
+
+
+
+
+
+
 
     }
   }
