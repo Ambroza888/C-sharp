@@ -111,7 +111,26 @@ namespace FirstCSharp
         Console.WriteLine($"The min Value is {min}");
         Console.WriteLine($"The avg Value is {avg}");
     }
+    public static int[] ShiftValues(int[] arr){
+        for (var i = 1; i < arr.Length;i++){
+            arr[i-1] = arr[i];
+        }
+        arr[arr.Length-1] = 0;
+        return arr;
+    }
+    public static object[] NumToString(int[] arr){
+        object[] newARR = new object[arr.Length];
+        for (var i = 0 ; i < arr.Length;i++){
+            if ( arr[i] < 0){
+                newARR[i] = "Dojo";
+            }
+            else{
+                newARR[i] = arr[i];
+            }
+        }
+        return newARR;
 
+    }
 
 
 
@@ -119,7 +138,9 @@ namespace FirstCSharp
     {       
             //====================== Basic 13 =====================================
             int[] arr = {1,2,-3,-4};
-            MinMaxAverage(arr);
+            foreach(var i in NumToString(arr)){
+                Console.WriteLine(i);
+            };
             //  foreach(var i in EliminateNegatives(arr)){
             //      Console.WriteLine(i);
             //  }
@@ -258,7 +279,11 @@ namespace FirstCSharp
     // Random rand = new Random();
     // int num;
     // string[] arr3 = {"Tim","Martin","Nikki","Sara"};
+
+
     // Dictionary <string,string> User = new Dictionary<string, string>();
+
+
     // num = rand.Next(0 , iceCream.Count);
     // User.Add(arr3[0], iceCream[num]);
     // num = rand.Next(0 , iceCream.Count);
