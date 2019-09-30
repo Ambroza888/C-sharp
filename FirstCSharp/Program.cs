@@ -6,8 +6,65 @@ namespace FirstCSharp
 {
   class Program
   {
+      public static void PrintNumbers(){
+          for (var i =1 ; i<= 255; i++){
+              Console.WriteLine(i);
+          }
+      }
+
+      public static void PrintOdds(){
+          for (var i = 1 ; i <= 255;i++){
+              if (i%2 == 1){
+                  Console.WriteLine(i);
+              }
+          }
+      }
+      public static void PrintSum(){
+          int sum = 0;
+          for (var i =0 ; i<=255; i++){
+              sum = sum + i;
+              Console.WriteLine($"New number is {i} Sum: {sum}");
+          }
+      }
+      public static void LoopArray(int[] numbers){
+          for (var i =0; i < numbers.Length;i++){
+              Console.WriteLine(i);
+          }
+      }
+      public static int FindMax(int[] numbers){
+          int max = numbers[0];
+          for (var i = 1; i< numbers.Length;i++){
+              if (numbers[i] > max){
+                  max = numbers[i];
+              }
+          }
+          return max;
+      }
+      public static int Sigma(int number){
+          int sum = 0;
+          for (var i =0 ; i <= number;i++){
+              sum = sum + i;
+              Console.WriteLine(sum);
+          }
+          return sum;
+      }
     static void Main(string[] args)
     {
+            // Sigma(5);
+            // PrintNumbers();
+            // PrintOdds();
+            // PrintSum();
+            // int[] arr = {-1,-7,-3,-50};
+            // Console.WriteLine(FindMax(arr));
+
+
+
+
+
+
+
+
+
       //     int start = 1;
       //     int end = 255;
       //    for (int i = start; i <= end;i++){
@@ -146,10 +203,12 @@ namespace FirstCSharp
     // foreach (var i in stuff){
     //     Console.WriteLine(i);
     // }
-    // int stuff0 = (int)stuff[0];
-    // int stuff1 = (int)stuff[1];
-    // int stuff2 = (int)stuff[2];
-    // int sum = stuff0 + stuff1 + stuff2;
+    // int sum = 0;
+    // foreach (var i in stuff){
+    //     if (i is int){
+    //         sum = sum + (int)i;
+    //     }
+    // }
     // Console.WriteLine(sum);
 
 
