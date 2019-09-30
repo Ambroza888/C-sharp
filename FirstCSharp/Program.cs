@@ -48,15 +48,98 @@ namespace FirstCSharp
           }
           return sum;
       }
+      public static void GetAverage(int[] arr){
+          int sum = 0;
+          for (var i =0 ; i < arr.Length;i++){
+              sum = sum + arr[i];
+          }
+          Console.WriteLine(sum / arr.Length);
+      }
+    public static int[] OddArray(){
+        int[] arr = new int[256/2];
+        int j =0;
+        for (var i =1 ; i <=255; i++){
+            if ( i%2 == 1){
+            arr[j] = i;
+            j++;
+            }
+            else{
+                Console.WriteLine("you didn't get in the if statement");
+            }
+        }
+        return arr;
+    }
+    public static int GreaterThanY(int[] arr, int y){
+        int count = 0;
+        for (var i =0 ; i < arr.Length;i++){
+            if(arr[i] > y){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static int[] SquareArrayValues(int[] arr){
+        for (var i = 0; i < arr.Length;i++){
+            arr[i] = arr[i] * arr[i];
+        }
+        return arr;
+    }
+
+    public static int[] EliminateNegatives(int[] arr){
+        for (var i =0 ; i < arr.Length;i++){
+            if (arr[i] < 0){
+                arr[i] = 0;
+            }
+        }
+        return arr;
+    }
+    public static void MinMaxAverage(int[] arr){
+        int max = arr[0];
+        int min = arr[0];
+        int sum = 0;
+        for (var i = 1; i < arr.Length;i++){
+            sum = sum + arr[i];
+            if (arr[i] > max){
+                max = arr[i];
+            }
+            else if (arr[i] < min){
+                min = arr[i];
+            }
+        }
+        int avg = sum/arr.Length;
+        Console.WriteLine($"The max Value is {max}");
+        Console.WriteLine($"The min Value is {min}");
+        Console.WriteLine($"The avg Value is {avg}");
+    }
+
+
+
+
     static void Main(string[] args)
-    {
+    {       
+            //====================== Basic 13 =====================================
+            int[] arr = {1,2,-3,-4};
+            MinMaxAverage(arr);
+            //  foreach(var i in EliminateNegatives(arr)){
+            //      Console.WriteLine(i);
+            //  }
+            // foreach(var i in SquareArrayValues(arr)){
+            // Console.WriteLine(i);
+            // }
+
+            // Console.WriteLine(GreaterThanY(arr,3));
+            // Console.WriteLine(OddArray());
+            // GetAverage(arr);
             // Sigma(5);
             // PrintNumbers();
             // PrintOdds();
             // PrintSum();
-            // int[] arr = {-1,-7,-3,-50};
             // Console.WriteLine(FindMax(arr));
 
+            // int[] yo = OddArray();
+            // foreach( var i in yo){
+            //     Console.WriteLine(i);
+            // }
 
 
 
