@@ -131,6 +131,26 @@ namespace FirstCSharp
     // foreach ( var i in User){
     //     Console.WriteLine(i);
     // }
+    // double val = 5.8;
+    // int dval = (int)val;
+    // Console.WriteLine(dval);
+
+    //=============================== Boxing and Unboxig==================
+
+    // List<object> stuff = new List<object>();
+    // stuff.Add(7);
+    // stuff.Add(28);
+    // stuff.Add(-1);
+    // stuff.Add(true);
+    // stuff.Add("chair");
+    // foreach (var i in stuff){
+    //     Console.WriteLine(i);
+    // }
+    // int stuff0 = (int)stuff[0];
+    // int stuff1 = (int)stuff[1];
+    // int stuff2 = (int)stuff[2];
+    // int sum = stuff0 + stuff1 + stuff2;
+    // Console.WriteLine(sum);
 
 
 
