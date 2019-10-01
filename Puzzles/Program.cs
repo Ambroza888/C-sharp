@@ -52,12 +52,32 @@ namespace Puzzles
                 Console.WriteLine($"The ratio of the head toss to total toss is {papi}");
                 return papi;
         }
+        
+
+        public static List<string> Names(){
+            List<string> names = new List<string>();
+            names.Add("stasqqqqqq");
+            names.Add("stasichqqqq");
+            names.Add("staz");
+            names.Add("ferdinandqqqq");
+            names.Add("lia");
+            names.Sort();
+            for (var i = 0 ; i < names.Count;i++){
+                if (names[i].Length < 5){
+                    names.RemoveAt(i);
+                }
+
+            }
+            return names;
+        }
 
         
         static void Main(string[] args)
         {
 
-            TossMultipleCoins(4);
+            foreach(var i in Names()){
+                Console.WriteLine(i);
+            };
 
 
 
