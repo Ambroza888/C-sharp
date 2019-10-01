@@ -3,39 +3,60 @@
 namespace Human
 {
 
-
-
-
-
-    class Vehicle
+    class Human
     {
-        int maxNumPassengers;
-        string color;
-        public Vehicle(int maxPass, string col){
-            maxNumPassengers = maxPass;
-            color = col;
+        //attributes
+        public string Name;
+        public int Strength;
+        public int Intelligence;
+        public int Dexterity;
+        private int health;
+        // Constructor
+        public Human(string nam){
+            Name = nam;
+            Strength = 3;
+            Intelligence = 3;
+            Dexterity = 3;
+            health = 100;
         }
-        public int MaxNumPassengers
-        {
-            get { return maxNumPassengers; }
+        public Human(string nam,int str, int intel,int dex, int hp){
+            Name = nam;
+            Strength = str;
+            Intelligence = intel;
+            Dexterity = dex;
+            health = hp;
         }
-        public string Color
-        {
-            get { return color; }
+
+        //Properties
+        public int H{
+            get {
+                return health;
+            }
+            set {
+                health = value;
+            }
+        }
+        //methods
+        public int Attack(Human Target){
+            Target.H = Target.H - (5 * Strength);
+            Console.WriteLine($"Remaining health of the target is {Target.H}");
+            return Target.H;
+
         }
     }
+
+
+
+    
     class Program
     {
         static void Main(string[] args)
         {
 
-            Vehicle veso = new Vehicle(10,"Green");
-            Console.WriteLine(veso.Color);
-
-
-
-
-
+            Human veso = new Human("veso");
+            Human stas = new Human("Stas");
+            veso.Attack(stas);
+            Console.WriteLine(stas.H);
 
 
 
