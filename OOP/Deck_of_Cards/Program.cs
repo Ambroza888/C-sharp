@@ -43,9 +43,6 @@ namespace Deck_of_Cards
         public Card PopTopCard()
         {
             Card c = cards[cards.Count-1];
-            // Console.WriteLine(c.stringVal);
-            // Console.WriteLine(c.suit);
-            // Console.WriteLine(c.val);
             cards.RemoveAt(cards.Count-1);
             return c;
         }
@@ -69,6 +66,39 @@ namespace Deck_of_Cards
                 cards[num2] = temp;
             }
         }
+    } 
+        class Player
+        {
+            //======= Attributes============
+            public string name;
+            public List<Card> hand;
+            // ===== Constructor =====
+            public Player(string nam)
+            {
+                name = nam;
+            }
+            //====== Methods ========
+            public Card draw()
+            {
+                hand = new List<Card>();
+                Deck d = new Deck();
+                Card playerC = d.PopTopCard();
+                hand.Add(playerC);
+                return playerC;
+            }
+            public Card discard (int idx)
+            {
+                if (idx < hand.Count)
+                {
+                Card y = hand[idx];
+                hand.RemoveAt(idx);
+                return y;
+                }
+                else
+                {
+                    return null;
+                }
+            }
 
 
 
@@ -76,14 +106,6 @@ namespace Deck_of_Cards
 
 
     }
-
-
-
-
-
-
-
-
     class Program
     {
         static void Main(string[] args)
@@ -92,7 +114,16 @@ namespace Deck_of_Cards
             Deck d = new Deck();
             Card t = d.PopTopCard();
             d.Shuffle();
+            d.Shuffle();
             d.ResetDeck();
+            d.Shuffle();
+            d.ResetDeck();
+            Player veso = new Player("Veso");
+            Card card1 = veso.draw();
+
+            System.Console.WriteLine(card1.stringVal);
+
         }
     }
+    
 }
