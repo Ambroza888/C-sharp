@@ -40,6 +40,7 @@ namespace Hungry_Ninja
             // ===== Methods=======
             public Food Serve()
             {
+                // System.Console.WriteLine("I ate " + this.Menu[new Random().Next(0,Menu.Count)] );
                 return this.Menu[new Random().Next(0,Menu.Count)];
             }
         }
@@ -65,9 +66,16 @@ namespace Hungry_Ninja
             {
                 // Buffet b = new Buffet();
                 // Food f = b.Serve();
+                if (this.isFull == false)
+                {
                 this.colorieIntake += new Buffet().Serve().Calories;
                 this.FoodHistory.Add(new Buffet().Serve());
-                
+                System.Console.WriteLine($"The Food name is {new Buffet().Serve().Name}, and if is spicy {new Buffet().Serve().isSpicy} or sweet{new Buffet().Serve().isSweet} and the calories is {new Buffet().Serve().Calories}");
+                }
+                else
+                {
+                    System.Console.WriteLine("The Ninja is Full cannot eat anymore");
+                }
             }
 
 
@@ -77,7 +85,13 @@ namespace Hungry_Ninja
     {   
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Ninja veso = new Ninja();
+            veso.Eat(new Buffet().Serve());
+            veso.Eat(new Buffet().Serve());
+            veso.Eat(new Buffet().Serve());
+            veso.Eat(new Buffet().Serve());
+            veso.Eat(new Buffet().Serve());
+            Console.WriteLine(veso.isFull);
         }
     }
 }
