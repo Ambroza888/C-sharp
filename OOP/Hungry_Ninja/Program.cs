@@ -42,10 +42,33 @@ namespace Hungry_Ninja
             {
                 return this.Menu[new Random().Next(0,Menu.Count)];
             }
-
-
-
-
+        }
+        class Ninja
+        {
+            //====== Attributes ======
+            private int colorieIntake;
+            public List<Food> FoodHistory;
+            // ===== Constructor=====
+            public Ninja()
+            {
+                this.colorieIntake = 0;
+                this.FoodHistory = new List<Food>();
+            }
+            //======== Properties========
+            //1
+            public bool isFull
+            {
+                get{return this.colorieIntake > 1200 ? true:false;}
+            }
+            //2
+            public void Eat(Food item)
+            {
+                // Buffet b = new Buffet();
+                // Food f = b.Serve();
+                this.colorieIntake += new Buffet().Serve().Calories;
+                this.FoodHistory.Add(new Buffet().Serve());
+                
+            }
 
 
 
