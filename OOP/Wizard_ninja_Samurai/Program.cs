@@ -53,7 +53,7 @@ class Wizard : Human
     public Wizard(string name) : base(name)
     {
         Name = name;
-        health = 50;
+        health = 49;
         Intelligence = 25;
     }
     // ================= Methods =============
@@ -71,7 +71,7 @@ class Wizard : Human
     {
         int heal = 10*Intelligence;
         System.Console.WriteLine($"The {target.Name} got heal from {this.Name} with {heal}hp");
-        return target.H += heal;;
+        return target.H += heal;
     }
 }
 class Ninja : Human
@@ -145,7 +145,7 @@ class Samurai : Human
             Ninja stas = new Ninja("Stas");
             Wizard ferdi = new Wizard("Ferdi");
             // ferdi.Attack(veso);
-            ferdi.Heal(veso);
+            veso.Attack(ferdi);
             System.Console.WriteLine($"Name: {veso.Name},Int: {veso.Intelligence}, Str: {veso.Strength},Dex: {veso.Dexterity},Health: {veso.H}");
             System.Console.WriteLine($"Name: {stas.Name},Int: {stas.Intelligence}, Str: {stas.Strength},Dex: {stas.Dexterity},Health: {stas.H}");
             System.Console.WriteLine($"Name: {ferdi.Name},Int: {ferdi.Intelligence}, Str: {ferdi.Strength},Dex: {ferdi.Dexterity},Health: {ferdi.H}");
