@@ -76,14 +76,14 @@ namespace Deck_of_Cards
             public Player(string nam)
             {
                 name = nam;
+                hand = new List<Card>();
             }
             //====== Methods ========
             public Card draw()
             {
-                hand = new List<Card>();
                 Deck d = new Deck();
                 Card playerC = d.PopTopCard();
-                hand.Add(playerC);
+                this.hand.Add(playerC);
                 return playerC;
             }
             public Card discard (int idx)
@@ -99,29 +99,31 @@ namespace Deck_of_Cards
                     return null;
                 }
             }
-
-
-
-
-
-
-    }
+        }
     class Program
     {
         static void Main(string[] args)
         {
             // Console.WriteLine("Hello World!");
-            Deck d = new Deck();
-            Card t = d.PopTopCard();
-            d.Shuffle();
-            d.Shuffle();
-            d.ResetDeck();
-            d.Shuffle();
-            d.ResetDeck();
+            // Deck d = new Deck();
+            // Card t = d.PopTopCard();
+            // d.Shuffle();
+            // d.Shuffle();
+            // d.ResetDeck();
+            // d.Shuffle();
+            // d.ResetDeck();
             Player veso = new Player("Veso");
-            Card card1 = veso.draw();
+            veso.draw();
+            veso.draw();
+            veso.draw();
+            // Card disc = veso.discard(2);
 
-            System.Console.WriteLine(card1.stringVal);
+            Console.WriteLine(veso.draw().stringVal);
+            // System.Console.WriteLine(card2.val);
+            // System.Console.WriteLine(card3.suit);
+            // System.Console.WriteLine(disc.stringVal);
+            // System.Console.WriteLine(disc.val);
+            // System.Console.WriteLine(disc.suit);
 
         }
     }
