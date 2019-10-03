@@ -2964,6 +2964,11 @@
       "FilePath": "Views\\Pizza\\index.cshtml",
       "TargetPath": "Views\\Pizza\\index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Pizza\\bra.cshtml",
+      "TargetPath": "Views\\Pizza\\bra.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

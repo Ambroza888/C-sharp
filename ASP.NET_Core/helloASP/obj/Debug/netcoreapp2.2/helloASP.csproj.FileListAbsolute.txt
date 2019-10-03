@@ -21,3 +21,4 @@ D:\Coding_Dojo_C#\ASP.NET_Core\helloASP\obj\Debug\netcoreapp2.2\Razor\Views\Pizz
 D:\Coding_Dojo_C#\ASP.NET_Core\helloASP\obj\Debug\netcoreapp2.2\helloASP.RazorTargetAssemblyInfo.cs
 D:\Coding_Dojo_C#\ASP.NET_Core\helloASP\obj\Debug\netcoreapp2.2\helloASP.Views.pdb
 D:\Coding_Dojo_C#\ASP.NET_Core\helloASP\obj\Debug\netcoreapp2.2\helloASP.csproj.CopyComplete
+D:\Coding_Dojo_C#\ASP.NET_Core\helloASP\obj\Debug\netcoreapp2.2\Razor\Views\Pizza\bra.g.cshtml.cs
