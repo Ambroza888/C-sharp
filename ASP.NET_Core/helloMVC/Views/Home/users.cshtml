@@ -1,0 +1,11 @@
+@model List<User>
+<h1>Here is some users</h1>
+
+
+  @foreach (var i in Model)
+  {
+    <ul>
+      <li>@i.FirstName  @i.LastName</li>
+    </ul>
+  }
+  <a href="/user">Go to ONE USER</a>

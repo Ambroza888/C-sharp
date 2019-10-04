@@ -1,0 +1,11 @@
+@model int[];
+<h1>HERE ARE SOME NUMBERS !!!</h1>
+
+@{
+  for (var i =0 ;i < @Model.Length;i++){
+    <ul>
+      <li>@Model[i]</li>
+    </ul>
+  }
+}
+<a href="/users">Go to users</a>
