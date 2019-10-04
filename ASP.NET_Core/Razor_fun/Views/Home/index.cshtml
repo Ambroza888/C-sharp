@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+@{
+  DateTime CurrentTime = DateTime.Now;
+}
+  <p>@CurrentTime.ToString("yyyy/MM/dd hh:mm")</p>
+
+
+
+
+
+
+
+
+
+
+@{
+  var somelist = new List<string>
+    {
+      "one",
+      "two",
+      "three",
+      "four",
+    };
+    foreach (var i in somelist)
+    {
+      <div>
+        <p>@i</p>
+        @if(i.Length < 4)
+        {
+            <p>@i is a short word</p>
+        }
+      </div>
+    }
+}
+
+
+
+
+
+
+
+
+
+</body>
+</html>
