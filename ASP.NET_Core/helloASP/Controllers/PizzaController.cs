@@ -32,9 +32,9 @@ namespace helloASP.Controllers
     }
     // Redirect from vvv --- go ---- > bra
     [HttpGet("go")]
-    public RedirectResult go()
+    public RedirectToActionResult go()
     {
-      return Redirect("bra");
+      return RedirectToAction("bra");
     }
     // render View("BRA")
     [HttpGet("bra")]
@@ -43,7 +43,17 @@ namespace helloASP.Controllers
       return View("bra");
     }
 
-
+  [HttpGet("users/{username}/{location}")]
+  public JsonResult Hi(string username,string location)
+  {
+    var response = new {user = username,place=location};
+    var stringarray = new string[]
+    {
+      "veso","This","papi"
+    };
+    bool isCool = true;
+    return Json(response);
+  }
 
   }
 }

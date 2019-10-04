@@ -27,6 +27,8 @@ namespace helloASP
             }
 
             app.UseMvc();
+            app.UseStaticFiles();
+            app.UseMvc();
         }
     }
 }
