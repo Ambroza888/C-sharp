@@ -21,3 +21,4 @@ D:\Coding_Dojo_C#\ASP.NET_Core\dojo_survey\obj\Debug\netcoreapp2.2\dojo_survey.V
 D:\Coding_Dojo_C#\ASP.NET_Core\dojo_survey\obj\Debug\netcoreapp2.2\dojo_survey.dll
 D:\Coding_Dojo_C#\ASP.NET_Core\dojo_survey\obj\Debug\netcoreapp2.2\dojo_survey.pdb
 D:\Coding_Dojo_C#\ASP.NET_Core\dojo_survey\obj\Debug\netcoreapp2.2\dojo_survey.csproj.CopyComplete
+D:\Coding_Dojo_C#\ASP.NET_Core\dojo_survey\obj\Debug\netcoreapp2.2\Razor\Views\Dojo\result.g.cshtml.cs

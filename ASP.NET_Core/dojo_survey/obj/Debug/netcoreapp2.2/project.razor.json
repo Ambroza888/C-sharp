@@ -2961,6 +2961,11 @@
   "RootNamespace": "dojo_survey",
   "Documents": [
     {
+      "FilePath": "Views\\Dojo\\result.cshtml",
+      "TargetPath": "Views\\Dojo\\result.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Dojo\\index.cshtml",
       "TargetPath": "Views\\Dojo\\index.cshtml",
       "FileKind": "mvc"

@@ -16,40 +16,11 @@
 <body>
 
   <div class="container">
-    <div class="row">
-      <div class="col-2 p-0">
-        <p>Your Name:</p>
-        <p>Dojo Location</p>
-        <p>Favorite Language:</p>
-      </div>
-      <div class="col-3 p-0">
-      <form action="/result" method="POST">
-        <p>
-          <input type="text" name="name">
-        </p>
-        <p>
-          <select name="location">
-            <option value="San Jose">San Jose</option>
-            <option value="Seattle">Seattle</option>
-            <option value="New York">New York</option>
-          </select>
-        </p>
-        <p>
-          <select name="lang">
-            <option value="C#">C#</option>
-            <option value="Python">Python</option>
-            <option value="Mean">MEAN</option>
-          </select>
-        </p>
-      </div>
-    </div>
-      <div class="row p-0">
-        <div class="col p-0">
-          <textarea name="commend" id="" cols="45" rows="5"></textarea><br>
-          <input type="submit" name="" value="Send Survey">
-          </form>
-        </div>
-      </div>
+    <h1>@ViewBag.name</h1>
+    <h1>@ViewBag.location</h1>
+    <h1>@ViewBag.lang</h1>
+    <h1>@ViewBag.commend</h1>
+    <a class="btn btn" href="/">back</a>
   </div>
 
 
